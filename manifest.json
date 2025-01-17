@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "FUM Scheduler (@FumPardis)",
+  "version": "1.0",
+  "description": "This extension helps you plan your weekly schedule by allowing you to select courses from the presented courses page and visualize how your days and times will be filled.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://pooya.um.ac.ir/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://pooya.um.ac.ir/educ/stu_portal/PresentedCoursesForm.php"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ]
+}
